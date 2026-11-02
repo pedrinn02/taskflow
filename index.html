@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow | Gerenciador de tarefas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="container">
+    <header class="header">
+      <div>
+        <p class="subtitle">ORGANIZE SUA ROTINA</p>
+        <h1>TaskFlow</h1>
+        <p class="description">
+          Suas tarefas organizadas em um só lugar.
+        </p>
+      </div>
+
+      <div class="counter">
+        <span id="taskCount">0</span>
+        <small>tarefas</small>
+      </div>
+    </header>
+
+    <section class="form-section">
+      <form id="taskForm">
+        <input
+          type="text"
+          id="taskInput"
+          placeholder="Digite uma nova tarefa..."
+          maxlength="100"
+          autocomplete="off"
+          required
+        >
+
+        <button type="submit">Adicionar</button>
+      </form>
+    </section>
+
+    <section class="tasks-section">
+      <div class="section-header">
+        <h2>Minhas tarefas</h2>
+
+        <select id="filter">
+          <option value="all">Todas</option>
+          <option value="pending">Pendentes</option>
+          <option value="completed">Concluídas</option>
+        </select>
+      </div>
+
+      <ul id="taskList"></ul>
+
+      <p id="emptyMessage" class="empty-message">
+        Nenhuma tarefa cadastrada.
+      </p>
+    </section>
+
+    <footer>
+      <p>TaskFlow — Seu progresso começa com uma tarefa.</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
